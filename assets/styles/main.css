@@ -1,6 +1,92 @@
 
+/* Add Border Box to all elements */
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* Visualize every element with a white box - debugging */
+/* * {
+    outline: 1px solid whitesmoke !important;
+  } */
+
+
+/* weight: Use a value from 400 to 700 */
+.dynapuff-font {
+    font-family: "DynaPuff", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+    color:blue;
+}
+
 header {
     display: grid;
     justify-items: center;
     /* justify-content: center; */
+}
+
+.tic-tac-toe {
+    display: grid;
+    justify-content: center;
+}
+
+#gameboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0.25rem;
+}
+
+.cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    font-size: 4rem;
+    border-color: blue;
+    border-width: 0.25rem;
+    border-style: solid;
+}
+
+.cell[data-index="0"] {
+    border-left: none;
+    border-top: none;
+}
+
+.cell[data-index="1"] {
+    border-top: none;
+}
+
+.cell[data-index="2"] {
+    border-right: none;
+    border-top: none;
+}
+
+.cell[data-index="3"] {
+    border-left: none;
+}
+
+.cell[data-index="5"] {
+    border-right: none;
+}
+
+.cell[data-index="6"] {
+    border-left: none;
+    border-bottom: none;
+}
+
+.cell[data-index="7"] {
+    border-bottom: none;
+}
+
+.cell[data-index="8"] {
+    border-right: none;
+    border-bottom: none;
 }
